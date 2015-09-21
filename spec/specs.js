@@ -10,4 +10,12 @@ describe("bottleCounter", function() {
 	it("takes the number '0' and returns the last lyrical sentence to 99 Bottles", function() {
 		expect(bottleCounter(0)).to.equal("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
 	});
+
+	it("does not accept any number lower than '0'", function() {
+		expect(bottleCounter(-1)).to.equal("It seems that you are too drunk to play this game. Try again!");
+	});
+
+	it("does not accept any number greater than '99'", function() {
+		expect(bottleCounter(101)).to.equal("It seems that you are too drunk to play this game. Try again!");
+	});
 });
