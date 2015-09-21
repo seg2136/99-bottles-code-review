@@ -14,14 +14,14 @@ var bottleCounter = function(number) {
 };
 
 
-// $(function() {
-//   $("form#bottle-counter").submit(function(event) {
-//     bottleNumber = parseInt($("input#bottleNumber").val());
+$(function() {
+  $("form#bottle-counter").submit(function(event) {
+    var bottleNumber = parseInt($("input#bottleNumber").val());
 
-//     result = bottleCounter(bottleNumber)
+    result = bottleCounter(bottleNumber)
 
-//     $("#").text(result)
+    $("#result").text(result)
 
-//     event.preventDefault();
-//   });
-// });
+    event.preventDefault();
+  });
+});
